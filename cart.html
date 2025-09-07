@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - TopSport</title>
+    
+    <!-- Bootstrap CSS for layout only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header (same as other pages) -->
+    <header class="navbar-container">
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html" aria-label="TopSport Home">
+                    <img src="images/logo.jpg" alt="TopSport Logo" class="logo">
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggler" type="button" 
+                        aria-controls="navbarNav" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Auth & Cart Buttons -->
+                    <div class="navbar-nav ms-auto d-flex flex-row gap-2">
+                        <a class="nav-link auth-btn" href="auth.html" id="loginBtn">Login</a>
+                        <a class="nav-link auth-btn" href="auth.html" id="registerBtn">Register</a>
+                        <button class="btn cart-btn active" 
+                                onclick="window.location.href='cart.html'" 
+                                aria-label="Shopping cart">
+                            <span id="cartTotal">🛒 $0.00</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Content -->
+    <main class="cart-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Shopping Cart</h1>
+                </div>
+            </div>
+
+            <!-- Cart Items -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="cart-items" id="cartItemsContainer">
+                        <!-- Cart items will be populated by JavaScript -->
+                        <div class="empty-cart" id="emptyCartMessage">
+                            <h3>Your cart is empty</h3>
+                            <p>Add some amazing sports equipment to get started!</p>
+                            <a href="index.html#products" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="col-lg-4">
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="cartSubtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="cartShipping">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax:</span>
+                            <span id="cartTax">$0.00</span>
+                        </div>
+                        <hr>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="cartGrandTotal">$0.00</span>
+                        </div>
+                        
+                        <button class="btn checkout-btn" id="checkoutBtn" disabled>
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
