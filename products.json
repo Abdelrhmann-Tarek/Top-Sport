@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Manchester United first Jersey",
+    "price": 49.99,
+    "image": "images/product1.jpg",
+    "description": "High-quality soccer jersey with moisture-wicking fabric and professional team design.",
+    "category": "jerseys",
+    "sport": "soccer",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Football Training jersey",
+    "price": 24.99,
+    "image": "images/product2.jpg",
+    "description": "Training jersey for soccer players in manutd.",
+    "category": "jerseys",
+    "sport": "soccer",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 3,
+    "name": "Football professional shoes",
+    "price": 59.99,
+    "image": "images/product3.jpg",
+    "description": "Authentic football shoes with team colors and premium breathable material.",
+    "category": "shoes",
+    "sport": "soccer",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": 4,
+    "name": "AC Milan training jersey ",
+    "price": 129.99,
+    "image": "images/product4.jpg",
+    "description": "Training jersey for AC Milan fans.",
+    "category": "jerseys",
+    "sport": "soccer",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 5,
+    "name": "Sports Bag",
+    "price": 19.99,
+    "image": "images/product5.jpg",
+    "description": "Sports bag for storing your gear.",
+    "category": "accessories",
+    "sport": "general",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 6,
+    "name": "Football professional Gloves",
+    "price": 79.99,
+    "image": "images/product6.jpg",
+    "description": "Professional gloves for football goalkeepers",
+    "category": "accessories",
+    "sport": "soccer",
+    "inStock": false,
+    "featured": true
+  },
+  {
+    "id": 7,
+    "name": "Manchester United GoalKeeper Jersey",
+    "price": 89.99,
+    "image": "images/product7.jpg",
+    "description": "Manchester United goalkeeper jersey",
+    "category": "jerseys",
+    "sport": "soccer",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 8,
+    "name": "Amad Diallo Second Jersey",
+    "price": 159.99,
+    "image": "images/product8.jpg",
+    "description": "Amad Diallo second jersey for Manchester United",
+    "category": "jerseys",
+    "sport": "soccer",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 9,
+    "name": "Sports Cap " ,
+    "price": 14.99,
+    "image": "images/product9.jpg",
+    "description": "Sports ManUtd cap for football fans",
+    "category": "accessories",
+    "sport": "soccer",
+    "inStock": true,
+    "featured": false
+  }
+]

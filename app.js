@@ -75,14 +75,29 @@ class CartManager {
         }
     }
 
-    // Get product data (placeholder - will be populated with real products)
+    // Load product data from products.json
+    async loadProductData() {
+        try {
+            const response = await fetch('products.json');
+            const products = await response.json();
+            
+            // Convert array to object with id as key for easier lookup
+            const productMap = {};
+            products.forEach(product => {
+                productMap[product.id] = product;
+            });
+            
+            this.products = productMap;
+            return products;
+        } catch (error) {
+            console.error('Error loading products:', error);
+            return [];
+        }
+    }
+
+    // Get product data (now loads from JSON)
     getProductData() {
-        return {
-            // Example product structure:
-            // 'product-1': { name: 'Basketball', price: 29.99, image: 'basketball.jpg' },
-            // 'product-2': { name: 'Soccer Ball', price: 24.99, image: 'soccer.jpg' },
-            // This will be populated when products are added to the site
-        };
+        return this.products;
     }
 
     // Get cart contents for cart page
