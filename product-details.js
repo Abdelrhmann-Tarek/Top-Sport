@@ -220,6 +220,33 @@ class ProductDetailsManager {
                 this.addToCart();
             });
         }
+
+        // Back to top button functionality
+        this.setupBackToTopButton();
+    }
+
+    // Setup back to top button functionality
+    setupBackToTopButton() {
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        if (!backToTopBtn) return;
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll to top when clicked
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
 
     // Add product to cart

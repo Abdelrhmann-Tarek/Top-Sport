@@ -237,6 +237,30 @@ const Utils = {
     }
 };
 
+// Back to Top Button functionality
+function setupBackToTopButton() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (!backToTopBtn) return;
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    // Smooth scroll to top when clicked
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 // Initialize application when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize cart manager
@@ -244,6 +268,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize navigation
     window.navigationManager = new NavigationManager();
+    
+    // Initialize back to top button
+    setupBackToTopButton();
     
     // Make utilities globally available
     window.Utils = Utils;
